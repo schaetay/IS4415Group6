@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class TwoDotThirteen {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        //Interest rate 0.05/12=0.00417
+        final double IR = 0.00417;
+
+        // User input for monthly savings amount
+        System.out.print("Enter the monthly saving amount: ");
+        double savingAmount = input.nextDouble();
+
+        // Month 1
+        double total = 100 * (1 + IR);
+        // Month 2
+        total = (100 + total) * (1 + IR);
+        // Month 3
+        total = (100 + total) * (1 + IR);
+        // Month 4
+        total = (100 + total) * (1 + IR);
+        // Month 5
+        total = (100 + total) * (1 + IR);
+        // Month 6
+        total = (100 + total) * (1 + IR);
+
+        // Display output
+        System.out.println("After the sixth month, the account value is " + total);
+    }
+}
+
