@@ -1,0 +1,35 @@
+import javax.swing.*;
+import java.util.Scanner;
+public class TwoDotTwentyOne {
+    public static void main(String []args) {
+        //Declare variables
+        double invest;
+        double rate;
+        double future;
+        int years;
+
+        Scanner input = new Scanner(System.in);
+
+        //user input for investment
+        System.out.print("Enter investment amount: ");
+        invest = input.nextDouble();
+
+        //user input for APR
+        System.out.print("Enter APR as decimal: ");
+        rate = input.nextDouble();
+
+        double monRate = rate / 12;
+
+        //user input for years
+        System.out.print("Enter number of years: ");
+        years = input.nextInt();
+
+        //calculation for future value
+        future = invest*Math.pow((1+monRate),years*12);
+        //round to two decimal places 
+        double roundOff = Math.round(future * 100.0) / 100.0;
+        System.out.print("Future value is $" + roundOff);
+
+
+    }
+}
