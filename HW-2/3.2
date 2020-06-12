@@ -1,0 +1,14 @@
+import java.util.Scanner;
+class ThreeTwo
+{
+    public static void main (String[] args) throws java.lang.Exception
+    {
+        int num1=(int)(System.currentTimeMillis()%10);
+        int num2=(int)(System.currentTimeMillis()/10%10);
+        int num3=(int)(System.currentTimeMillis()*10%10);
+        Scanner input = new Scanner(System.in);
+        System.out.println("What is "+num1+" + "+num2+" + "+num3+" : ");
+        int answer=input.nextInt();
+        System.out.println(num1+" + "+num2+" + "+num3+" = "+answer+" is "+((num1+num2+num3)==answer));
+    }
+}
