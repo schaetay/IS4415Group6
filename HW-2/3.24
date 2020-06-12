@@ -1,0 +1,21 @@
+import java.util.Random;
+public class Exercise_3_24
+{
+    public static void main(String[] args)
+    {
+        Random rand = new Random();
+
+        //Creates lists
+        String[] rankNames = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
+        String[] suitNames = {"Clubs", "Diamonds", "Spades", "Hearts"};
+
+        //Selects random string from list of rank
+        int randNumRank = rand.nextInt(13);
+        //Selects random string from list of suit
+        int randNumSuit = rand.nextInt(4);
+        int rank = randNumRank;
+        int suit = randNumSuit;
+        System.out.println("The card you picked is " + rankNames[rank] + " of " + suitNames[suit]);
+
+    }
+}
