@@ -1,0 +1,40 @@
+public class Exercise_5_2 {
+    public static void main(String[] args)
+    {
+        int correctCount =0; //count number of correct answers
+        int count =0; // Count number of questions
+        java.util.Scanner input = new java.util.Scanner(System.in);
+        long startTime = System.currentTimeMillis();
+
+        while (count < 10)
+        {
+            // 1. Generate two random single digit intigers
+            int number1 = (int)(Math.random() * 15) + 1;
+            int number2 = (int)(Math.random() * 15) + 1;
+
+            //2. Prompt the user to answer.
+            System.out.print("What is " + number1 + " + " + number2 + " ?");
+
+            int answer = input.nextInt();
+
+            // 3. Grade the answer and display result
+            String replyString;
+            if (number1 + number2 == answer) {
+                replyString = "You are correct";
+                correctCount++;
+            }
+                else {
+                replyString = "Your answer is wrong. " + number1 + " + " + number2 + " Should be " + (number1 + number2);
+                }
+
+                System.out.println(replyString);
+
+                // Increase the count.
+                count++;
+        }
+
+        System.out.println("Correct count is " + correctCount);
+        long endTime = System.currentTimeMillis();
+        System.out.println("Time spent is " + (endTime - startTime) / 1000 + "seconds");
+    }
+}
